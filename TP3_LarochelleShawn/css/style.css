@@ -263,7 +263,7 @@ select {
 .live-ticker__track {
   display: flex;
   width: max-content;
-  animation: ticker-scroll 60s linear infinite;
+  animation: ticker-scroll 70s linear infinite;
 }
 
 .live-ticker__content {
@@ -282,6 +282,8 @@ select {
   }
 }
 
+/* P1: Champion Card */
+
 .champion-section {
   padding: 80px 5%;
   background-color: var(--color-black);
@@ -293,17 +295,41 @@ select {
   margin: 0 auto;
 }
 
+.champion-section__champion {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.champion-section__header {
+  margin-bottom: 0;
+}
+
+.champion-section__eyebrow {
+  margin: 0 0 4px;
+  color: var(--color-crimson-light);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.champion-section__title {
+  margin: 0;
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
 .champion-card {
   position: relative;
   overflow: hidden;
-  min-height: 560px;
   background-color: var(--color-charcoal);
   border: 1px solid var(--color-steel);
-}
-
-.champion-section__champion {
-  display: flex;
-  align-items: center;
 }
 
 .champion-card__image {
@@ -322,23 +348,11 @@ select {
   padding: 24px;
 }
 
-.champion-card__eyebrow {
-  margin-bottom: 8px;
-  color: var(--color-crimson-light);
-  font-family: var(--font-display);
-  font-size: 1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
 .champion-card__name {
   margin: 0 0 24px;
-
   font-family: var(--font-display);
   font-size: 3rem;
   font-weight: 900;
-
   line-height: 0.9;
   text-transform: uppercase;
 }
@@ -368,14 +382,20 @@ select {
   letter-spacing: 1px;
 }
 
+/*P1: Featured Matches*/
+
 .featured-matches {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
+.featured-matches__header {
+  margin-bottom: 0;
+}
+
 .featured-matches__eyebrow {
-  margin-bottom: 4px;
+  margin: 0 0 4px;
   color: var(--color-crimson-light);
   font-family: var(--font-display);
   font-size: 1rem;
@@ -385,10 +405,12 @@ select {
 }
 
 .featured-matches__title {
-  margin: 0 0 12px;
+  margin: 0;
+  color: var(--color-white);
   font-family: var(--font-display);
   font-size: 2.5rem;
   font-weight: 900;
+  line-height: 1;
   text-transform: uppercase;
 }
 
@@ -396,16 +418,42 @@ select {
   position: relative;
   overflow: hidden;
   padding: 20px 24px 0;
-  min-height: 220px;
-  background-color: var(--color-charcoal);
+  min-height: 280px;
+  background:
+    radial-gradient(
+      circle at center bottom,
+      rgba(190, 25, 35, 0.14),
+      transparent 48%
+    ),
+    var(--color-charcoal);
   border-left: 4px solid var(--color-crimson);
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.match-card:hover {
+  border-left-color: var(--color-crimson-light);
+}
+
+.match-card::before {
+  content: "BPW";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  font-family: var(--font-display);
+  font-size: 10rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.025);
+  pointer-events: none;
 }
 
 .match-card__matchup {
   display: flex;
   align-items: end;
   justify-content: space-between;
-  height: 180px;
+  height: 220px;
 }
 
 .match-card__wrestler {
@@ -417,16 +465,56 @@ select {
   justify-content: end;
 }
 
+.match-card__wrestler strong {
+  margin-top: 10px;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  padding: 4px 10px;
+  background-color: rgba(16, 16, 16, 0.75);
+  border-bottom: 2px solid var(--color-crimson);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
 .match-card__wrestler img {
+  width: auto;
   max-width: 100%;
-  max-height: 140px;
+  max-height: 175px;
   object-fit: contain;
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+.match-card:hover .match-card__wrestler img {
+  transform: translateY(-6px) scale(1.03);
+  filter: brightness(1.08);
 }
 
 .match-card__wrestler strong {
   font-family: var(--font-display);
   font-size: 1.3rem;
   text-transform: uppercase;
+}
+
+.match-card__team {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100%;
+}
+
+.match-card__team img {
+  width: auto;
+  height: 140px;
+  object-fit: contain;
+}
+
+.match-card__team img + img {
+  margin-left: -30px;
 }
 
 .match-card__vs {
@@ -437,15 +525,19 @@ select {
   color: var(--color-crimson);
 }
 
-.button--secondary {
-  align-self: flex-start;
-  border: 1px solid var(--color-crimson);
+.match-card__type {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
   color: var(--color-white);
-  background-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.button--secondary:hover {
-  background-color: var(--color-crimson);
+.featured-matches__actions {
+  display: flex;
+  justify-content: flex-start;
 }
 
 /* Screen sizes adaptation */

@@ -2,9 +2,9 @@
 const nextEvent = {
   series: "Breakpoint:",
   name: "Fracture",
-  date: "2026-09-19T20:00:00",
-  dateDisplay: "September 19, 2026",
-  location: "Montréal, QC",
+  date: "2026-10-12T20:00:00",
+  dateDisplay: "October 12th, 2026",
+  location: "Montreal, QC",
 };
 document.getElementById("event-series").textContent = nextEvent.series;
 
