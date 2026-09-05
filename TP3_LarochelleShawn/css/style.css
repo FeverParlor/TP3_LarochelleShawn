@@ -328,13 +328,20 @@ select {
 .champion-card {
   position: relative;
   overflow: hidden;
-  background-color: var(--color-charcoal);
+  background: var(--color-charcoal);
   border: 1px solid var(--color-steel);
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
 }
 
-.champion-card__image {
-  height: 500px;
-  overflow: hidden;
+.champion-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--color-crimson);
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(166, 25, 35, 0.35);
 }
 
 .champion-card__image img {
@@ -342,6 +349,32 @@ select {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  transition:
+    transform 0.45s ease,
+    filter 0.45s ease;
+}
+
+.champion-card:hover .champion-card__image img {
+  transform: scale(1.06);
+  filter: contrast(1.08) brightness(1.08);
+}
+
+.champion-card__image {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+}
+
+.champion-card__image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(166, 25, 35, 0.22) 0%,
+    rgba(0, 0, 0, 0) 45%
+  );
+  pointer-events: none;
 }
 
 .champion-card__content {
@@ -355,6 +388,14 @@ select {
   font-weight: 900;
   line-height: 0.9;
   text-transform: uppercase;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.champion-card:hover .champion-card__name {
+  color: var(--color-crimson-light);
+  transform: translateX(6px);
 }
 
 .champion-card__stats {
@@ -371,6 +412,9 @@ select {
   font-family: var(--font-display);
   font-size: 2rem;
   line-height: 1;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .champion-card__stat span {
@@ -378,6 +422,24 @@ select {
   color: var(--color-grey);
   font-size: 0.7rem;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.champion-card:hover .champion-card__stat strong {
+  color: var(--color-crimson-light);
+  transform: translateY(-2px);
+}
+
+.champion-card__status {
+  display: inline-block;
+  margin: 0 0 12px;
+  padding: 5px 10px;
+  background-color: var(--color-crimson);
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -538,6 +600,113 @@ select {
 .featured-matches__actions {
   display: flex;
   justify-content: flex-start;
+}
+
+/* P1: Latest News */
+
+.news-section {
+  padding: 80px 5%;
+  background-color: var(--color-charcoal);
+}
+
+.news-section__inner {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.news-section__header {
+  margin-bottom: 30px;
+}
+
+.news-section__eyebrow {
+  margin: 0 0 4px;
+
+  color: var(--color-crimson-light);
+
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.news-section__title {
+  margin: 0;
+
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 900;
+
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.news-card {
+  overflow: hidden;
+
+  background-color: var(--color-black);
+  border: 1px solid var(--color-steel);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-crimson);
+}
+
+.news-card__image {
+  width: 100%;
+  height: 220px;
+
+  object-fit: cover;
+}
+
+.news-card__content {
+  padding: 24px;
+}
+
+.news-card__date {
+  margin: 0 0 10px;
+
+  color: var(--color-grey);
+
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.news-card__title {
+  margin: 0 0 12px;
+
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 900;
+
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.news-card__excerpt {
+  margin: 0 0 18px;
+
+  color: var(--color-light-grey);
+}
+
+.news-card__link {
+  color: var(--color-crimson-light);
+
+  font-family: var(--font-display);
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 /* Screen sizes adaptation */
