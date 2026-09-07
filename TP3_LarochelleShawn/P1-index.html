@@ -7,46 +7,44 @@
       name="description"
       content="Breakpoint Pro Wrestling. No Limit. Make or Break."
     />
-    <title>Breakpoint Pro Wrestling | BPW</title>
+    <title>Breakpoint Pro Wrestling | Welcome</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
     <header class="site-header">
-      <header class="site-header">
-        <div class="site-header__inner">
-          <a
-            class="site-header__logo"
-            href="index.html"
-            aria-label="Breakpoint Pro Wrestling home"
-          >
-            BPW
-          </a>
+      <div class="site-header__inner">
+        <a
+          class="site-header__logo"
+          href="index.html"
+          aria-label="Breakpoint Pro Wrestling home"
+        >
+          BPW
+        </a>
 
-          <nav class="site-nav" aria-label="Main navigation">
-            <ul class="site-nav__list">
-              <li>
-                <a class="site-nav__link" href="roster.html"> Roster </a>
-              </li>
+        <nav class="site-nav" aria-label="Main navigation">
+          <ul class="site-nav__list">
+            <li>
+              <a class="site-nav__link" href="P2-roster.html"> Roster </a>
+            </li>
 
-              <li>
-                <a class="site-nav__link" href="events.html"> Events </a>
-              </li>
+            <li>
+              <a class="site-nav__link" href="P3-events.html"> Events </a>
+            </li>
 
-              <li>
-                <a class="site-nav__link" href="championships.html">
-                  Championships
-                </a>
-              </li>
+            <li>
+              <a class="site-nav__link" href="P4-championship.html">
+                Championships
+              </a>
+            </li>
 
-              <li>
-                <a class="site-nav__link" href="academy.html"> Academy </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+            <li>
+              <a class="site-nav__link" href="P5-academy.html"> Academy </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main>
@@ -279,7 +277,7 @@
             <article class="news-card col-span-12 md:col-span-6 lg:col-span-4">
               <img
                 class="news-card__image"
-                src="assets/images/news/News 1.jpg"
+                src="assets/images/news/news-1.jpg"
                 alt="Dessler Winning Streak"
               />
 
@@ -302,7 +300,7 @@
             <article class="news-card col-span-12 md:col-span-6 lg:col-span-4">
               <img
                 class="news-card__image"
-                src="assets/images/news/News 2.jpg"
+                src="assets/images/news/news-2.jpg"
                 alt="Axel Wave Returns"
               />
 
@@ -325,7 +323,7 @@
             <article class="news-card col-span-12 md:col-span-6 lg:col-span-4">
               <img
                 class="news-card__image"
-                src="assets/images/news/News 3.jpg"
+                src="assets/images/news/news-3.jpg"
                 alt="Academy in action"
               />
 
@@ -345,9 +343,50 @@
           </div>
         </div>
       </section>
+      <section class="academy-cta">
+        <div class="academy-cta__content">
+          <p class="academy-cta__eyebrow">BPW Academy</p>
+
+          <h2 class="academy-cta__title">Think You Belong Here?</h2>
+
+          <p class="academy-cta__text">
+            Step inside the BPW Academy and find out what you're made of.
+          </p>
+
+          <a class="button button--primary" href="academy.html">
+            Start Training
+          </a>
+        </div>
+      </section>
     </main>
 
-    <footer class="site-footer"></footer>
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="site-footer__brand">
+          <a
+            class="site-footer__logo"
+            href="P1-index.html"
+            aria-label="Breakpoint Pro Wrestling home"
+          >
+            BPW
+          </a>
+
+          <p class="site-footer__tagline">No Limit. Make or Break.</p>
+        </div>
+
+        <nav class="site-footer__nav" aria-label="Footer navigation">
+          <a href="P2-roster.html">Roster</a>
+          <a href="P3-events.html">Events</a>
+          <a href="P4-championship.html">Championships</a>
+          <a href="P5-academy.html">Academy</a>
+        </nav>
+
+        <div class="site-footer__meta">
+          <p>© 2026 Breakpoint Pro Wrestling</p>
+          <p>All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
 
     <script src="js/main.js"></script>
   </body>
