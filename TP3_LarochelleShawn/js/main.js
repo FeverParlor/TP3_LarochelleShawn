@@ -173,6 +173,54 @@ const wrestlers = {
     bio: "The Thetford Bruiser takes no prisoners, doesn't do mercy and leaves only broken bodies in his wake. Karl Jepson is hard-hitting, unrelenting and focused on inflicting as much pain as he wants before finally putting an end to the match.",
   },
 
+  "kc-austin": {
+    name: "KC Austin",
+    nickname: "Cowboy",
+    status: "Singles Division",
+    height: `5'11"`,
+    weight: "264 lbs",
+    hometown: "From the closest saloon",
+    finisher: "Wrangler's Drop",
+    image: "assets/images/wrestlers/KC_Austin-Matchup.png",
+    bio: "This western hero is the last remnants of ancient times of lawlessness. Today, he wrangles his way around every ring he stumbles into. A big fan-favorite, this cowboy rarely draws the dead man's hand.",
+  },
+
+  "rayen-gurzil": {
+    name: "Rayen Gurzil",
+    nickname: "The Prophet",
+    status: "Singles Division",
+    height: `5'8"`,
+    weight: "172 lbs",
+    hometown: "Salem, MA, USA",
+    finisher: "Sorcerer Bomb",
+    image: "assets/images/wrestlers/Rayen_Gurzil-Matchup.png",
+    bio: "The mystical Rayen Gurzil is a mysterious character that captivates the BPW universe. Scheming, plotting and forever searching the recipe to be on top of the food chain, no one truly knows how to battle the prophet.",
+  },
+
+  "lil-pep": {
+    name: "Lil Pep",
+    nickname: "The Hardcore Rappah",
+    status: "Singles Division",
+    height: `5'6"`,
+    weight: "150 lbs",
+    hometown: "Downtown Drummond, QC",
+    finisher: "Pep Talk",
+    image: "assets/images/wrestlers/Lil_Pep-Matchup.png",
+    bio: "What can be said bout Lil Pep? He's a hardcore rapper from the darkest part for middle class downtown Drummondville. Living a somewhat inconvenient life, Lil Pep tries to live his rapping dream from the basement of his mother and ended up the wrestler with the longest losing streak in BPW history.",
+  },
+
+  grixix: {
+    name: "Grixix",
+    nickname: "The Gaulish Hero",
+    status: "Singles Division",
+    height: `5'4"`,
+    weight: "163 lbs",
+    hometown: "The Legends and Fables",
+    finisher: "Apogee",
+    image: "assets/images/wrestlers/Grixix-Matchup.png",
+    bio: "The prophecy foretold of a hero that would climb the biggest mountain to sit on the throne of the world. Grixix is a warrior that might look out of place but also has the biggest of heart and willpower. With the support of his fans, this warrior will. bring you the fight of the century... every night.",
+  },
+
   "jason-gray": {
     name: "Jason Gray",
     nickname: "The Soldier",
