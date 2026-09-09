@@ -323,3 +323,49 @@ if (
     }
   });
 }
+
+/* P3: Featured counter */
+
+const featuredEvent = document.querySelector(".featured-event");
+
+if (featuredEvent) {
+  const daysElement = document.querySelector("#event-days");
+  const hoursElement = document.querySelector("#event-hours");
+  const minutesElement = document.querySelector("#event-minutes");
+  const secondsElement = document.querySelector("#event-seconds");
+
+  if (daysElement && hoursElement && minutesElement && secondsElement) {
+    const eventDate = new Date("2026-10-12T20:00:00").getTime();
+
+    function updateFeaturedCountdown() {
+      const now = new Date().getTime();
+      const distance = eventDate - now;
+
+      if (distance <= 0) {
+        daysElement.textContent = "00";
+        hoursElement.textContent = "00";
+        minutesElement.textContent = "00";
+        secondsElement.textContent = "00";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+      const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+      );
+
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      daysElement.textContent = days.toString().padStart(2, "0");
+      hoursElement.textContent = hours.toString().padStart(2, "0");
+      minutesElement.textContent = minutes.toString().padStart(2, "0");
+      secondsElement.textContent = seconds.toString().padStart(2, "0");
+    }
+
+    updateFeaturedCountdown();
+    setInterval(updateFeaturedCountdown, 1000);
+  }
+}
