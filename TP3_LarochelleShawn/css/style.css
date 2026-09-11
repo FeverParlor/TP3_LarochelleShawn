@@ -1514,35 +1514,30 @@ select {
   content: "";
   position: absolute;
   inset: 0;
-
   background: linear-gradient(
     115deg,
     transparent 35%,
     rgba(181, 20, 35, 0.08) 50%,
     transparent 65%
   );
-
   pointer-events: none;
 }
 
 .events-hero__overlay {
   position: absolute;
   inset: 0;
-
   background: linear-gradient(
     to right,
     rgba(0, 0, 0, 0.55),
     transparent 45%,
     rgba(0, 0, 0, 0.25)
   );
-
   pointer-events: none;
 }
 
 .events-hero__inner {
   position: relative;
   z-index: 1;
-
   width: min(1200px, 100%);
   margin: 0 auto;
 }
@@ -1562,13 +1557,10 @@ select {
 
 .events-hero__title {
   margin: 0;
-
   color: var(--color-white);
-
   font-family: var(--font-display);
   font-size: clamp(4rem, 9vw, 7rem);
   font-weight: 900;
-
   line-height: 0.9;
   text-transform: uppercase;
 }
@@ -1576,34 +1568,9 @@ select {
 .events-hero__subtitle {
   max-width: 620px;
   margin: 18px 0 0;
-
   color: var(--color-grey);
-
   font-size: 1.1rem;
   line-height: 1.6;
-}
-
-/* Screen sizes adaptation */
-
-@media (min-width: 1600px) {
-  .event-hero {
-    min-height: 780px;
-  }
-}
-
-@media (max-width: 768px) {
-  .site-footer__inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .site-footer__nav {
-    flex-wrap: wrap;
-  }
-
-  .site-footer__meta {
-    text-align: left;
-  }
 }
 
 /*P3: Featured Event */
@@ -1621,7 +1588,6 @@ select {
 .featured-event__grid {
   position: relative;
   padding: 42px;
-
   background:
     radial-gradient(
       circle at 20% 50%,
@@ -1632,9 +1598,7 @@ select {
 
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-bottom: 4px solid var(--color-crimson);
-
   box-shadow: 0 30px 70px rgba(0, 0, 0, 0.4);
-
   overflow: hidden;
 }
 
@@ -1642,14 +1606,12 @@ select {
   content: "";
   position: absolute;
   inset: 0;
-
   background: linear-gradient(
     120deg,
     transparent 40%,
     rgba(181, 20, 35, 0.06) 50%,
     transparent 60%
   );
-
   pointer-events: none;
 }
 
@@ -1664,9 +1626,7 @@ select {
   width: 100%;
   max-width: 430px;
   margin: 0 auto;
-
   border: 1px solid rgba(255, 255, 255, 0.08);
-
   box-shadow:
     0 24px 50px rgba(0, 0, 0, 0.5),
     0 0 30px rgba(181, 20, 35, 0.08);
@@ -1674,46 +1634,35 @@ select {
 
 .featured-event__eyebrow {
   margin: 0 0 8px;
-
   color: var(--color-crimson-light);
-
   font-family: var(--font-display);
   font-size: 0.9rem;
   font-weight: 700;
-
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
 .featured-event__title {
   margin: 0;
-
   color: var(--color-white);
-
   font-family: var(--font-display);
   font-size: clamp(3.2rem, 6vw, 5.5rem);
   font-weight: 900;
-
   line-height: 0.92;
   text-transform: uppercase;
 }
 
 .featured-event__title span {
   display: block;
-
   margin-bottom: 4px;
-
   color: var(--color-grey);
-
   font-size: 0.35em;
   letter-spacing: 2px;
 }
 
 .featured-event__meta {
   margin: 18px 0 0;
-
   color: var(--color-grey);
-
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -1727,26 +1676,20 @@ select {
 .featured-event__countdown {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-
   gap: 10px;
-
   margin: 30px 0;
 }
 
 .featured-event__time {
   padding: 16px 10px;
-
   text-align: center;
-
   background: rgba(255, 255, 255, 0.03);
   border-top: 2px solid var(--color-crimson);
 }
 
 .featured-event__time strong {
   display: block;
-
   color: var(--color-white);
-
   font-family: var(--font-display);
   font-size: 2rem;
   line-height: 1;
@@ -1754,11 +1697,8 @@ select {
 
 .featured-event__time span {
   display: block;
-
   margin-top: 6px;
-
   color: var(--color-grey);
-
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -1767,32 +1707,25 @@ select {
 /* Featured match */
 .featured-event__match {
   padding: 18px 0;
-
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .featured-event__match-label {
   margin: 0 0 6px;
-
   color: var(--color-crimson-light);
-
   font-family: var(--font-display);
   font-size: 0.8rem;
   font-weight: 700;
-
   text-transform: uppercase;
   letter-spacing: 1.4px;
 }
 
 .featured-event__matchup {
   margin: 0;
-
   color: var(--color-white);
-
   font-family: var(--font-display);
   font-size: 1.6rem;
-
   text-transform: uppercase;
 }
 
@@ -1802,38 +1735,452 @@ select {
 
 .featured-event__matchup strong {
   margin: 0 8px;
-
   color: var(--color-crimson-light);
-
   font-size: 0.8em;
 }
 
 /* Button */
 .featured-event__button {
   display: inline-block;
-
   margin-top: 26px;
   padding: 13px 22px;
-
   background: var(--color-crimson);
   border: 1px solid var(--color-crimson-light);
-
   color: var(--color-white);
-
   font-family: var(--font-display);
   font-size: 0.9rem;
   font-weight: 700;
-
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1px;
-
   transition:
     background 0.25s ease,
     transform 0.25s ease;
 }
 
+/* P3: Modal */
+
+.event-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease;
+}
+
+.event-modal--open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.event-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(4px);
+}
+
+.event-modal__dialog {
+  position: relative;
+  z-index: 1;
+  width: min(1050px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 42px;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(181, 20, 35, 0.18), transparent 40%),
+    var(--color-charcoal);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 4px solid var(--color-crimson);
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.65),
+    0 0 40px rgba(181, 20, 35, 0.08);
+  transform: translateY(20px) scale(0.98);
+  opacity: 0;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.event-modal--open .event-modal__dialog {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.event-modal__header {
+  margin-bottom: 32px;
+  padding-right: 50px;
+}
+
+.event-modal__eyebrow {
+  margin: 0 0 6px;
+  color: var(--color-crimson-light);
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.event-modal__title {
+  margin: 0;
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 900;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.event-modal__meta {
+  margin: 12px 0 0;
+  color: var(--color-grey);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.event-modal__close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  z-index: 3;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--color-white);
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.event-modal__close:hover {
+  background: var(--color-crimson);
+  border-color: var(--color-crimson-light);
+  transform: rotate(5deg);
+}
+
 .featured-event__button:hover {
   background: var(--color-crimson-light);
   transform: translateY(-2px);
+}
+
+/* P3 - EVENT MATCH CARD */
+
+.event-modal__matches {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.event-modal__secondary {
+  margin-top: 2px;
+}
+
+/* Individual Match */
+.event-match {
+  position: relative;
+  overflow: hidden;
+  min-height: 250px;
+  background:
+    radial-gradient(circle at center, rgba(181, 20, 35, 0.2), transparent 58%),
+    #151515;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 3px solid var(--color-crimson);
+}
+
+/* Main Event */
+.event-match--main {
+  min-height: 350px;
+  background:
+    radial-gradient(circle at center, rgba(181, 20, 35, 0.3), transparent 55%),
+    #151515;
+}
+
+/* Match Type / Championship */
+.event-match__label {
+  position: relative;
+  z-index: 3;
+  margin: 0;
+  padding: 11px 14px;
+  color: var(--color-crimson-light);
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  background: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Wrestler Layout */
+.event-match__content {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: end;
+  min-height: 300px;
+  padding: 14px 20px 0;
+}
+
+/* Smaller Undercard Matches */
+.event-match__content--small {
+  min-height: 220px;
+  padding: 12px 12px 0;
+}
+
+/* Wrestler */
+.event-match__wrestler {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-width: 0;
+  text-align: center;
+}
+
+/* Wrestler Images */
+.event-match__wrestler img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  margin: 0 auto;
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+/* Individual PNG size corrections */
+
+.event-match__image--beast {
+  transform: scale(1.22);
+  transform-origin: center bottom;
+}
+
+.event-match__image--rayen {
+  transform: scale(1.18);
+  transform-origin: center bottom;
+}
+
+/* Main Event Wrestlers */
+.event-match--main .event-match__wrestler img {
+  height: 290px;
+}
+
+/* Smaller Match Wrestlers */
+.event-match__content--small .event-match__wrestler img {
+  width: 100%;
+  height: 175px;
+}
+
+/* Wrestler Names */
+.event-match__wrestler h3,
+.event-match__teams h3 {
+  position: relative;
+  z-index: 2;
+  margin: 0 0 14px;
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.05;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Main Event Names */
+.event-match--main .event-match__wrestler h3 {
+  font-size: 1.4rem;
+}
+
+/* Champion Marker */
+.event-match__wrestler h3 span,
+.event-match__teams h3 span {
+  color: var(--color-grey);
+}
+
+/* VS */
+.event-match__vs {
+  position: relative;
+  z-index: 2;
+  align-self: center;
+  padding: 0 10px;
+  color: rgba(255, 255, 255, 0.2);
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+/* Larger Main Event VS */
+.event-match--main .event-match__vs {
+  color: var(--color-crimson-light);
+
+  font-size: 3.5rem;
+}
+
+/* TAG TEAM MATCH */
+
+.event-match__wrestler--team {
+  min-width: 0;
+}
+
+.event-match__team-images {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 165px;
+  margin-bottom: 6px;
+}
+
+.event-match__team-images img {
+  display: block;
+  width: 54%;
+  height: 165px;
+  object-fit: contain;
+  object-position: center bottom;
+  transform: translateY(10px) scale(0.92);
+  transform-origin: center bottom;
+}
+
+.event-match__wrestler--grays .event-match__team-images img {
+  transform: translateY(2px) scale(0.8);
+}
+
+.event-match__team-images img:first-child {
+  margin-right: -26px;
+}
+
+.event-match__team-images img:last-child {
+  margin-left: -26px;
+}
+
+.event-match__wrestler--team h3 {
+  margin-top: 0;
+}
+
+.event-match__team-members {
+  margin: -6px 0 12px;
+  color: var(--color-grey);
+  font-size: 0.68rem;
+  line-height: 1.3;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* MATCH CARD HOVER */
+
+.event-match {
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.event-match:hover {
+  border-color: rgba(181, 20, 35, 0.4);
+  box-shadow:
+    inset 0 0 30px rgba(181, 20, 35, 0.05),
+    0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Screen sizes adaptation */
+
+@media (max-width: 1600px) {
+  .event-hero {
+    min-height: 780px;
+  }
+
+  .event-match__image--jack {
+    transform: scale(1.1);
+    transform-origin: center bottom;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-footer__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-footer__nav {
+    flex-wrap: wrap;
+  }
+
+  .site-footer__meta {
+    text-align: left;
+  }
+
+  /* Mobile Tag Team PNGs modifications */
+
+  .event-match__team-images {
+    height: 135px;
+  }
+
+  .event-match__team-images img {
+    width: 62%;
+    height: 135px;
+  }
+
+  .event-match__team-images img:first-child {
+    margin-right: -24px;
+  }
+
+  .event-match__team-images img:last-child {
+    margin-left: -24px;
+  }
+
+  .event-match__team-members {
+    font-size: 0.58rem;
+  }
+
+  /* Mobile wrestler size corrections */
+
+  .event-match__image--dessler {
+    transform: translateY(-10px) scale(1.22);
+    transform-origin: center bottom;
+  }
+
+  .event-match__image--axel {
+    transform: translateY(-10px) scale(0.92);
+    transform-origin: center bottom;
+  }
+
+  .event-match__image--karl {
+    transform: translateY(-10px) scale(0.99);
+    transform-origin: center bottom;
+  }
+
+  .event-match__image--jack {
+    transform: translateY(-10px) scale(1.1);
+    transform-origin: center bottom;
+  }
+
+  .event-match__image--grixix {
+    transform: translateY(-8px) scale(1.02);
+    transform-origin: center bottom;
+  }
+
+  .event-match__image--rayen {
+    transform: translateY(-8px) scale(1.02);
+    transform-origin: center bottom;
+  }
 }

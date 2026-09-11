@@ -63,7 +63,6 @@
           <div
             class="featured-event__grid grid grid-cols-12 gap-8 items-center"
           >
-            <!-- Poster -->
             <div class="featured-event__poster col-span-12 lg:col-span-5">
               <img
                 src="assets/images/events/Fracture-Event.png"
@@ -123,13 +122,240 @@
                 </p>
               </div>
 
-              <a class="featured-event__button" href="#fracture-card">
+              <button
+                class="featured-event__button"
+                type="button"
+                id="open-fracture-card"
+              >
                 View Event Card
-              </a>
+              </button>
             </div>
           </div>
         </div>
       </section>
+
+      <!--Modal-->
+      <div class="event-modal" id="event-modal" aria-hidden="true">
+        <div class="event-modal__backdrop"></div>
+
+        <div
+          class="event-modal__dialog"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="event-modal-title"
+        >
+          <button
+            class="event-modal__close"
+            type="button"
+            aria-label="Close event card"
+          >
+            ×
+          </button>
+
+          <div class="event-modal__header">
+            <p class="event-modal__eyebrow" id="event-modal-eyebrow">
+              Official Match Card
+            </p>
+
+            <h2 class="event-modal__title" id="event-modal-title">
+              Breakpoint: Fracture
+            </h2>
+
+            <p class="event-modal__meta" id="event-modal-meta">
+              October 12th, 2026 • Montreal, QC
+            </p>
+          </div>
+
+          <div class="event-modal__matches" id="event-modal-matches">
+            <!-- Main Event -->
+            <article class="event-match event-match--main">
+              <p class="event-match__label">
+                Main Event • BPW World Championship
+              </p>
+
+              <div class="event-match__content">
+                <div class="event-match__wrestler">
+                  <img
+                    class="event-match__image--dessler"
+                    src="assets/images/wrestlers/Dessler-Matchup.png"
+                    alt="Shawn Dessler"
+                  />
+
+                  <h3>
+                    Shawn Dessler
+                    <span>(C)</span>
+                  </h3>
+                </div>
+
+                <span class="event-match__vs">VS</span>
+
+                <div class="event-match__wrestler">
+                  <img
+                    class="event-match__image--axel"
+                    src="assets/images/wrestlers/Axel_Wave-Matchup.png"
+                    alt="Axel Wave"
+                  />
+
+                  <h3>Axel Wave</h3>
+                </div>
+              </div>
+            </article>
+
+            <div class="event-modal__secondary grid grid-cols-12 gap-4">
+              <!-- Intercontinental Championship -->
+              <article class="event-match col-span-12 lg:col-span-6">
+                <p class="event-match__label">
+                  BPW Intercontinental Championship
+                </p>
+
+                <div class="event-match__content event-match__content--small">
+                  <div class="event-match__wrestler">
+                    <img
+                      class="event-match__image--beast"
+                      src="assets/images/wrestlers/Beast_King-Matchup.png"
+                      alt="Beast King FTM"
+                    />
+
+                    <h3>
+                      Beast King FTM
+                      <span>(C)</span>
+                    </h3>
+                  </div>
+
+                  <span class="event-match__vs">VS</span>
+
+                  <div class="event-match__wrestler">
+                    <img
+                      src="assets/images/wrestlers/Lil_Pep-Matchup.png"
+                      alt="Lil Pep"
+                    />
+
+                    <h3>Lil Pep</h3>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Tag Team Championship -->
+              <article class="event-match col-span-12 lg:col-span-6">
+                <p class="event-match__label">BPW Tag Team Championship</p>
+
+                <div class="event-match__content event-match__content--small">
+                  <!-- Northern Mafia -->
+                  <div
+                    class="event-match__wrestler event-match__wrestler--team"
+                  >
+                    <div class="event-match__team-images">
+                      <img
+                        src="assets/images/wrestlers/Nick_Melvick-Matchup.png"
+                        alt="Nick Melvick"
+                      />
+
+                      <img
+                        src="assets/images/wrestlers/Mickey_Thunder-Matchup.png"
+                        alt="Mickey Thunder"
+                      />
+                    </div>
+
+                    <h3>
+                      The Northern Mafia
+                      <span>(C)</span>
+                    </h3>
+
+                    <p class="event-match__team-members">
+                      N. Melvick & Mickey Thunder
+                    </p>
+                  </div>
+
+                  <span class="event-match__vs">VS</span>
+
+                  <!-- The Grays -->
+                  <div
+                    class="event-match__wrestler event-match__wrestler--team event-match__wrestler--grays"
+                  >
+                    <div class="event-match__team-images">
+                      <img
+                        src="assets/images/wrestlers/Jason_Grey-Matchup.png"
+                        alt="Jason Gray"
+                      />
+
+                      <img
+                        src="assets/images/wrestlers/Kevin_Gray-Matchup.png"
+                        alt="Kevin Gray"
+                      />
+                    </div>
+
+                    <h3>The Grays</h3>
+
+                    <p class="event-match__team-members">
+                      Jason Gray & Kevin Gray
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Grudge Match -->
+              <article class="event-match col-span-12 lg:col-span-6">
+                <p class="event-match__label">Grudge Match</p>
+
+                <div class="event-match__content event-match__content--small">
+                  <div class="event-match__wrestler">
+                    <img
+                      class="event-match__image--karl"
+                      src="assets/images/wrestlers/Karl_Jepson-Matchup.png"
+                      alt="Karl Jepson"
+                    />
+
+                    <h3>Karl Jepson</h3>
+                  </div>
+
+                  <span class="event-match__vs">VS</span>
+
+                  <div class="event-match__wrestler">
+                    <img
+                      class="event-match__image--jack"
+                      src="assets/images/wrestlers/Stryker-Matchup.png"
+                      alt="Jack Stryker"
+                    />
+
+                    <h3>Jack Stryker</h3>
+                  </div>
+                </div>
+              </article>
+
+              <!-- #1 Contender Match -->
+              <article class="event-match col-span-12 lg:col-span-6">
+                <p class="event-match__label">
+                  #1 Contender • BPW Intercontinental Championship
+                </p>
+
+                <div class="event-match__content event-match__content--small">
+                  <div class="event-match__wrestler">
+                    <img
+                      class="event-match__image--grixix"
+                      src="assets/images/wrestlers/Grixix-Matchup.png"
+                      alt="Grixix"
+                    />
+
+                    <h3>Grixix</h3>
+                  </div>
+
+                  <span class="event-match__vs">VS</span>
+
+                  <div class="event-match__wrestler">
+                    <img
+                      class="event-match__image--rayen"
+                      src="assets/images/wrestlers/Rayen_Gurzil-Matchup.png"
+                      alt="Rayen Gurzil"
+                    />
+
+                    <h3>Rayen Gurzil</h3>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer class="site-footer">

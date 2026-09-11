@@ -369,3 +369,37 @@ if (featuredEvent) {
     setInterval(updateFeaturedCountdown, 1000);
   }
 }
+
+/* P3: Event Modal */
+
+const eventModal = document.querySelector("#event-modal");
+const openFractureCard = document.querySelector("#open-fracture-card");
+const eventModalClose = document.querySelector(".event-modal__close");
+const eventModalBackdrop = document.querySelector(".event-modal__backdrop");
+
+if (eventModal && openFractureCard && eventModalClose && eventModalBackdrop) {
+  openFractureCard.addEventListener("click", () => {
+    eventModal.classList.add("event-modal--open");
+    eventModal.setAttribute("aria-hidden", "false");
+  });
+
+  eventModalClose.addEventListener("click", () => {
+    eventModal.classList.remove("event-modal--open");
+    eventModal.setAttribute("aria-hidden", "true");
+  });
+
+  eventModalBackdrop.addEventListener("click", () => {
+    eventModal.classList.remove("event-modal--open");
+    eventModal.setAttribute("aria-hidden", "true");
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (
+      event.key === "Escape" &&
+      eventModal.classList.contains("event-modal--open")
+    ) {
+      eventModal.classList.remove("event-modal--open");
+      eventModal.setAttribute("aria-hidden", "true");
+    }
+  });
+}
