@@ -1,4 +1,4 @@
-const CACHE_NAME = "bpw-cache-v4";
+const CACHE_NAME = "bpw-cache-v5";
 
 const APP_SHELL = [
   "./index.html",
