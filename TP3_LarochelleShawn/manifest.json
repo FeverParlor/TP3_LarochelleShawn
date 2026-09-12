@@ -2,7 +2,7 @@
   "name": "Breakpoint Pro Wrestling",
   "short_name": "BPW",
   "description": "The official Breakpoint Pro Wrestling website featuring the BPW roster, championships, events and wrestling academy.",
-  "start_url": "./P1-index.html",
+  "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "background_color": "#0a0a0a",

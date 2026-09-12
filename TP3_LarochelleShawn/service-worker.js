@@ -2,7 +2,7 @@ const CACHE_NAME = "bpw-cache-v2";
 
 const APP_SHELL = [
   "./",
-  "./P1-index.html",
+  "./index.html",
   "./P2-roster.html",
   "./P3-events.html",
   "./P4-championship.html",
@@ -95,7 +95,7 @@ self.addEventListener("fetch", (event) => {
         })
         .catch(() => {
           if (event.request.mode === "navigate") {
-            return caches.match("./P1-index.html");
+            return caches.match("./index.html");
           }
         });
     }),
