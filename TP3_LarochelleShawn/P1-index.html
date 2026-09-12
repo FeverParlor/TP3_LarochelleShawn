@@ -16,7 +16,7 @@
 
   <body>
     <header class="site-header">
-      <div class="site-header__inner">
+      <div class="site-header__inner flex items-center justify-between">
         <a
           class="site-header__logo"
           href="P1-index.html"
@@ -30,7 +30,7 @@
         </a>
 
         <nav class="site-nav" aria-label="Main navigation">
-          <ul class="site-nav__list">
+          <ul class="site-nav__list flex items-center gap-8">
             <li>
               <a class="site-nav__link" href="P2-roster.html"> Roster </a>
             </li>
@@ -266,7 +266,10 @@
             </article>
 
             <div class="featured-matches__actions">
-              <a class="button button--primary" href="P3-events.html">
+              <a
+                class="button button--primary inline-block px-6 py-3 font-bold uppercase"
+                href="P3-events.html"
+              >
                 View Full Card
               </a>
             </div>
@@ -282,14 +285,16 @@
           </div>
 
           <div class="news-section__grid grid grid-cols-12 gap-6">
-            <article class="news-card col-span-12 md:col-span-6 lg:col-span-4">
+            <article
+              class="news-card col-span-12 md:col-span-6 lg:col-span-4 overflow-hidden h-full"
+            >
               <img
                 class="news-card__image"
                 src="assets/images/news/news-1.jpg"
                 alt="Dessler Winning Streak"
               />
 
-              <div class="news-card__content">
+              <div class="news-card__content p-6">
                 <p class="news-card__date">September 1, 2026</p>
 
                 <h3 class="news-card__title">
@@ -311,14 +316,16 @@
               </div>
             </article>
 
-            <article class="news-card col-span-12 md:col-span-6 lg:col-span-4">
+            <article
+              class="news-card col-span-12 md:col-span-6 lg:col-span-4 overflow-hidden h-full"
+            >
               <img
                 class="news-card__image"
                 src="assets/images/news/news-2.jpg"
                 alt="Axel Wave Returns"
               />
 
-              <div class="news-card__content">
+              <div class="news-card__content p-6">
                 <p class="news-card__date">August 28, 2026</p>
 
                 <h3 class="news-card__title">
@@ -334,14 +341,16 @@
               </div>
             </article>
 
-            <article class="news-card col-span-12 md:col-span-6 lg:col-span-4">
+            <article
+              class="news-card col-span-12 md:col-span-6 lg:col-span-4 overflow-hidden h-full"
+            >
               <img
                 class="news-card__image"
                 src="assets/images/news/news-3.jpg"
                 alt="Academy in action"
               />
 
-              <div class="news-card__content">
+              <div class="news-card__content p-6">
                 <p class="news-card__date">August 24, 2026</p>
 
                 <h3 class="news-card__title">Academy applications now open</h3>
@@ -369,7 +378,10 @@
             Step inside the BPW Academy and find out what you're made of.
           </p>
 
-          <a class="button button--primary" href="P5-academy.html">
+          <a
+            class="button button--primary inline-block px-6 py-3 font-bold uppercase"
+            href="P5-academy.html"
+          >
             Start Training
           </a>
         </div>

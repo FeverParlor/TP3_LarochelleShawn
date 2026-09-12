@@ -12,7 +12,7 @@
 
   <body>
     <header class="site-header">
-      <div class="site-header__inner">
+      <div class="site-header__inner flex items-center justify-between">
         <a
           class="site-header__logo"
           href="P1-index.html"
@@ -26,7 +26,7 @@
         </a>
 
         <nav class="site-nav" aria-label="Main navigation">
-          <ul class="site-nav__list">
+          <ul class="site-nav__list flex items-center gap-8">
             <li>
               <a class="site-nav__link" href="P2-roster.html"> Roster </a>
             </li>
@@ -81,7 +81,9 @@
           </div>
 
           <div class="academy-training__grid grid grid-cols-12 gap-6">
-            <article class="training-card col-span-12 md:col-span-4">
+            <article
+              class="training-card col-span-12 md:col-span-4 overflow-hidden h-full p-6"
+            >
               <p class="training-card__number">01</p>
 
               <h3 class="training-card__title">Fundamentals</h3>
@@ -92,7 +94,9 @@
               </p>
             </article>
 
-            <article class="training-card col-span-12 md:col-span-4">
+            <article
+              class="training-card col-span-12 md:col-span-4 overflow-hidden h-full p-6"
+            >
               <p class="training-card__number">02</p>
 
               <h3 class="training-card__title">In-Ring Development</h3>
@@ -103,7 +107,9 @@
               </p>
             </article>
 
-            <article class="training-card col-span-12 md:col-span-4">
+            <article
+              class="training-card col-span-12 md:col-span-4 overflow-hidden h-full p-6"
+            >
               <p class="training-card__number">03</p>
 
               <h3 class="training-card__title">Character & Promo</h3>
@@ -331,7 +337,10 @@
               </div>
             </div>
 
-            <button class="academy-form__submit" type="submit">
+            <button
+              class="academy-form__submit inline-block px-6 py-3 font-bold uppercase"
+              type="submit"
+            >
               Submit Application
             </button>
 

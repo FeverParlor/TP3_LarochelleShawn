@@ -12,7 +12,7 @@
 
   <body>
     <header class="site-header">
-      <div class="site-header__inner">
+      <div class="site-header__inner flex items-center justify-between">
         <a
           class="site-header__logo"
           href="P1-index.html"
@@ -26,7 +26,7 @@
         </a>
 
         <nav class="site-nav" aria-label="Main navigation">
-          <ul class="site-nav__list">
+          <ul class="site-nav__list flex items-center gap-8">
             <li>
               <a class="site-nav__link" href="P2-roster.html"> Roster </a>
             </li>
@@ -129,7 +129,7 @@
               </div>
 
               <button
-                class="featured-event__button"
+                class="featured-event__button inline-block px-6 py-3 font-bold uppercase"
                 type="button"
                 id="open-fracture-card"
               >
@@ -153,7 +153,9 @@
           </div>
 
           <div class="events-list__grid grid grid-cols-12 gap-6">
-            <article class="event-preview col-span-12 md:col-span-6">
+            <article
+              class="event-preview col-span-12 md:col-span-6 overflow-hidden h-full p-6"
+            >
               <div class="event-preview__accent" aria-hidden="true"></div>
 
               <p class="event-preview__status">Upcoming</p>
@@ -175,7 +177,9 @@
               </p>
             </article>
 
-            <article class="event-preview col-span-12 md:col-span-6">
+            <article
+              class="event-preview col-span-12 md:col-span-6 overflow-hidden h-full p-6"
+            >
               <div class="event-preview__accent" aria-hidden="true"></div>
 
               <p class="event-preview__status">Upcoming</p>
@@ -215,7 +219,7 @@
           <div class="events-list__grid grid grid-cols-12 gap-6">
             <!-- Brutality -->
             <article
-              class="event-preview event-preview--past col-span-12 md:col-span-4"
+              class="event-preview event-preview--past col-span-12 md:col-span-4 overflow-hidden h-full p-6"
             >
               <p class="event-preview__status">Previous Event</p>
 
@@ -236,7 +240,7 @@
               </p>
 
               <button
-                class="event-preview__button event-preview__button--ghost results-button"
+                class="event-preview__button event-preview__button--ghost results-button inline-block px-6 py-3 font-bold uppercase"
                 type="button"
                 data-event="brutality"
               >
@@ -246,7 +250,7 @@
 
             <!-- Collision -->
             <article
-              class="event-preview event-preview--past col-span-12 md:col-span-4"
+              class="event-preview event-preview--past col-span-12 md:col-span-4 overflow-hidden h-full p-6"
             >
               <p class="event-preview__status">Past Event</p>
 
@@ -267,7 +271,7 @@
               </p>
 
               <button
-                class="event-preview__button event-preview__button--ghost results-button"
+                class="event-preview__button event-preview__button--ghost results-button inline-block px-6 py-3 font-bold uppercase"
                 type="button"
                 data-event="collision"
               >
@@ -277,7 +281,7 @@
 
             <!-- Ground Zero -->
             <article
-              class="event-preview event-preview--past col-span-12 md:col-span-4"
+              class="event-preview event-preview--past col-span-12 md:col-span-4 overflow-hidden h-full p-6"
             >
               <p class="event-preview__status">Past Event</p>
 
@@ -298,7 +302,7 @@
               </p>
 
               <button
-                class="event-preview__button event-preview__button--ghost results-button"
+                class="event-preview__button event-preview__button--ghost results-button inline-block px-6 py-3 font-bold uppercase"
                 type="button"
                 data-event="ground-zero"
               >
@@ -343,7 +347,9 @@
 
           <div class="event-modal__matches" id="event-modal-matches">
             <!-- Main Event -->
-            <article class="event-match event-match--main">
+            <article
+              class="event-preview col-span-12 md:col-span-6 overflow-hidden h-full p-6"
+            >
               <p class="event-match__label">
                 Main Event • BPW World Championship
               </p>
@@ -378,7 +384,9 @@
 
             <div class="event-modal__secondary grid grid-cols-12 gap-4">
               <!-- Intercontinental Championship -->
-              <article class="event-match col-span-12 lg:col-span-6">
+              <article
+                class="event-preview col-span-12 md:col-span-6 overflow-hidden h-full p-6"
+              >
                 <p class="event-match__label">
                   BPW Intercontinental Championship
                 </p>
@@ -411,7 +419,9 @@
               </article>
 
               <!-- Tag Team Championship -->
-              <article class="event-match col-span-12 lg:col-span-6">
+              <article
+                class="event-preview col-span-12 md:col-span-6 overflow-hidden h-full p-6"
+              >
                 <p class="event-match__label">BPW Tag Team Championship</p>
 
                 <div class="event-match__content event-match__content--small">
@@ -469,7 +479,9 @@
               </article>
 
               <!-- Grudge Match -->
-              <article class="event-match col-span-12 lg:col-span-6">
+              <article
+                class="event-preview col-span-12 md:col-span-6 overflow-hidden h-full p-6"
+              >
                 <p class="event-match__label">Grudge Match</p>
 
                 <div class="event-match__content event-match__content--small">
@@ -498,7 +510,9 @@
               </article>
 
               <!-- #1 Contender Match -->
-              <article class="event-match col-span-12 lg:col-span-6">
+              <article
+                class="event-preview col-span-12 md:col-span-6 overflow-hidden h-full p-6"
+              >
                 <p class="event-match__label">
                   #1 Contender • BPW Intercontinental Championship
                 </p>

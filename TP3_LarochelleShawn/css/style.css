@@ -1334,6 +1334,12 @@ select {
   inset: 0;
   background: rgba(0, 0, 0, 0.82);
   backdrop-filter: blur(4px);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.wrestler-modal--open .wrestler-modal__backdrop {
+  opacity: 1;
 }
 
 .wrestler-modal__dialog {
@@ -1362,19 +1368,6 @@ select {
 
 .wrestler-modal--open .wrestler-modal__dialog {
   transform: translateY(0) scale(1);
-  opacity: 1;
-}
-
-.wrestler-modal__backdrop {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.82);
-  backdrop-filter: blur(4px);
-  opacity: 0;
-  transition: opacity 0.25s ease;
-}
-
-.wrestler-modal--open .wrestler-modal__backdrop {
   opacity: 1;
 }
 
@@ -3396,13 +3389,9 @@ select {
 
   .championship--world .championship__stats,
   .championship--tag .championship__stats {
+    order: 5;
     width: 100%;
     grid-template-columns: 1fr;
-  }
-
-  .championship--world .championship__stat,
-  .championship--tag .championship__stat {
-    width: 100%;
   }
 
   .championship--tag .championship__stat--members {
