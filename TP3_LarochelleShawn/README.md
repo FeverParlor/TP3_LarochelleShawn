@@ -174,7 +174,7 @@ The project's visual direction, structure, content, implementation decisions and
 
 GitHub repository:
 
-[ADD GITHUB REPOSITORY URL HERE]
+https://github.com/FeverParlor/TP3_LarochelleShawn
 
 ## Live Website
 
