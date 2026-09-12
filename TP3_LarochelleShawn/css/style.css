@@ -4,15 +4,12 @@
 
 :root {
   /* BPW Colors */
-  --color-black: #101010;
+  --color-black: #000000;
   --color-charcoal: #1a1a1a;
   --color-steel: #343434;
-
   --color-grey: #858585;
   --color-light-grey: #d4d4d4;
-
   --color-white: #f5f5f5;
-
   --color-crimson: #a61923;
   --color-crimson-dark: #741218;
   --color-crimson-light: #cf2733;
@@ -88,6 +85,12 @@ select {
   line-height: 1;
 }
 
+.site-header__logo-image {
+  display: block;
+  width: 100px;
+  height: auto;
+}
+
 .site-nav__list {
   display: flex;
   align-items: center;
@@ -112,7 +115,6 @@ select {
 
 .site-footer {
   padding: 50px 5%;
-
   background-color: var(--color-black);
   border-top: 1px solid var(--color-steel);
 }
@@ -120,13 +122,10 @@ select {
 .site-footer__inner {
   width: 100%;
   max-width: 1600px;
-
   margin: 0 auto;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   gap: 40px;
 }
 
@@ -136,21 +135,18 @@ select {
   gap: 8px;
 }
 
-.site-footer__logo {
-  font-family: var(--font-logo);
-  font-size: 2.5rem;
-  line-height: 1;
+.site-footer__logo-image {
+  display: block;
+  width: 100px;
+  height: auto;
 }
 
 .site-footer__tagline {
   margin: 0;
-
   color: var(--color-grey);
-
   font-family: var(--font-display);
   font-size: 1rem;
   font-weight: 700;
-
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -163,9 +159,7 @@ select {
 .site-footer__nav a {
   font-family: var(--font-display);
   font-weight: 700;
-
   text-transform: uppercase;
-
   transition: color 0.2s ease;
 }
 
@@ -176,9 +170,7 @@ select {
 
 .site-footer__meta {
   color: var(--color-grey);
-
   font-size: 0.75rem;
-
   text-align: right;
 }
 

@@ -7,6 +7,8 @@
       name="description"
       content="Breakpoint Pro Wrestling. No Limit. Make or Break."
     />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#b00020" />
     <title>Breakpoint Pro Wrestling | Welcome</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/style.css" />
@@ -20,7 +22,11 @@
           href="P1-index.html"
           aria-label="Breakpoint Pro Wrestling home"
         >
-          BPW
+          <img
+            src="assets/icons/icon-144.png"
+            alt="BPW"
+            class="site-header__logo-image"
+          />
         </a>
 
         <nav class="site-nav" aria-label="Main navigation">
@@ -290,10 +296,16 @@
 
                 <p class="news-card__excerpt">
                   The BPW World Champion continues one of the promotion's most
-                  dominant reigns in its history.
+                  dominant reigns in its history with controversial win at
+                  Brutality!
                 </p>
 
-                <a class="news-card__link" href="#"> Read More </a>
+                <a
+                  class="news-card__link"
+                  href="P3-events.html?event=brutality"
+                >
+                  Read More
+                </a>
               </div>
             </article>
 
@@ -316,7 +328,7 @@
                   a HUGE return!
                 </p>
 
-                <a class="news-card__link" href="#"> Read More </a>
+                <a class="news-card__link" href="P3-events.html"> Read More </a>
               </div>
             </article>
 
@@ -337,7 +349,9 @@
                   applications.
                 </p>
 
-                <a class="news-card__link" href="academy.html"> Learn More </a>
+                <a class="news-card__link" href="P5-academy.html">
+                  Learn More
+                </a>
               </div>
             </article>
           </div>
@@ -353,7 +367,7 @@
             Step inside the BPW Academy and find out what you're made of.
           </p>
 
-          <a class="button button--primary" href="academy.html">
+          <a class="button button--primary" href="P5-academy.html">
             Start Training
           </a>
         </div>
@@ -368,7 +382,11 @@
             href="P1-index.html"
             aria-label="Breakpoint Pro Wrestling home"
           >
-            BPW
+            <img
+              src="assets/icons/blk-icon-144.png"
+              alt="BPW"
+              class="site-footer__logo-image"
+            />
           </a>
 
           <p class="site-footer__tagline">No Limit. Make or Break.</p>

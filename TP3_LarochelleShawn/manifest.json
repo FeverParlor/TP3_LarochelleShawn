@@ -1,0 +1,39 @@
+{
+  "name": "Breakpoint Pro Wrestling",
+  "short_name": "BPW",
+  "description": "The official Breakpoint Pro Wrestling website featuring the BPW roster, championships, events and wrestling academy.",
+  "start_url": "./P1-index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#b00020",
+  "icons": [
+    {
+      "src": "assets/icons/icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "assets/images/bpw-screenshot.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Breakpoint Pro Wrestling homepage"
+    }
+  ]
+}

@@ -607,6 +607,46 @@ if (
     });
   });
 
+  /* Open a specific past event from another page */
+  const urlParams = new URLSearchParams(window.location.search);
+  const requestedEvent = urlParams.get("event");
+
+  if (requestedEvent && pastEvents[requestedEvent]) {
+    const eventData = pastEvents[requestedEvent];
+
+    resultsModalEyebrow.textContent = eventData.eyebrow;
+    resultsModalTitle.textContent = eventData.title;
+    resultsModalMeta.textContent = eventData.meta;
+
+    resultsModalResults.innerHTML = "";
+
+    eventData.results.forEach((result) => {
+      resultsModalResults.innerHTML += `
+        <div class="result-item">
+          <p class="result-item__type">${result.type}</p>
+          <p class="result-item__match">${result.match}</p>
+        </div>
+      `;
+    });
+
+    resultsModalSegments.innerHTML = "";
+
+    if (eventData.segments && eventData.segments.length > 0) {
+      eventData.segments.forEach((segment) => {
+        resultsModalSegments.innerHTML += `
+          <div class="result-segment">
+            <p class="result-segment__label">Event Segment</p>
+            <h3 class="result-segment__title">${segment.title}</h3>
+            <p class="result-segment__text">${segment.text}</p>
+          </div>
+        `;
+      });
+    }
+
+    resultsModal.classList.add("results-modal--open");
+    resultsModal.setAttribute("aria-hidden", "false");
+  }
+
   function closeResultsModal() {
     resultsModal.classList.remove("results-modal--open");
     resultsModal.setAttribute("aria-hidden", "true");
@@ -623,5 +663,13 @@ if (
     ) {
       closeResultsModal();
     }
+  });
+}
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./service-worker.js").catch((error) => {
+      console.error("Service Worker registration failed:", error);
+    });
   });
 }
