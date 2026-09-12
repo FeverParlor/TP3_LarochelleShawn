@@ -403,3 +403,225 @@ if (eventModal && openFractureCard && eventModalClose && eventModalBackdrop) {
     }
   });
 }
+
+/* P3: Past Event Results */
+
+const pastEvents = {
+  brutality: {
+    eyebrow: "Previous Event",
+    title: "Breakpoint: Brutality",
+    meta: "September 14th, 2026 • Sherbrooke, QC",
+
+    results: [
+      {
+        type: "BPW World Championship",
+        match: "Shawn Dessler (C) def. Karl Jepson",
+      },
+      {
+        type: "BPW Intercontinental Championship",
+        match: "Beast King FTM (C) def. Jack Stryker",
+      },
+      {
+        type: "BPW Tag Team Championship",
+        match: "The Northern Mafia (C) def. French Invasion",
+      },
+      {
+        type: "Singles Match",
+        match: "Rayen Gurzil def. KC Austin and Lil Pep",
+      },
+    ],
+    segments: [
+      {
+        title: "Jepson Plays God",
+        text: "As the match became 50/50, Jepson interrupted the intercontinental championship match, giving Beast King a chair shot to make him win against Stryker via disqualification!",
+      },
+      {
+        title: "Stryker Changes Everything",
+        text: "During the World Championship main event, Jack Stryker took his revenge on Karl Jepson behind the referee's back. The interference allowed Shawn Dessler to land the final blow and retain the championship.",
+      },
+
+      {
+        title: "Shawn Dessler Calls Out The Whole Roster",
+        text: "After yet another underhanded win with the uncoordinated help of Jack Stryker, Shawn Dessler grabs the announcer's mic and taunts the BPW universe by telling them no one will ever beat him for the title and that he will keep it until he dies!",
+      },
+
+      {
+        title: "Axel Wave Returns",
+        text: "After months away from BPW, Axel Wave made a surprise return at Brutality to a huge crowd reaction and took down Dessler during his speech, setting his sight on a World Championship match at Fracture!",
+      },
+    ],
+  },
+
+  collision: {
+    eyebrow: "Past Event",
+    title: "Breakpoint: Collision",
+    meta: "August 17th, 2026 • Montreal, QC",
+
+    results: [
+      {
+        type: "BPW World Championship",
+        match: "Shawn Dessler (C) def. Rayen Gurzil",
+      },
+      {
+        type: "BPW Intercontinental Championship",
+        match: "Beast King FTM (C) def. KC Austin",
+      },
+      {
+        type: "Tag Team Match - #1 Contenders",
+        match: "French Invasion def. The Grays",
+      },
+      {
+        type: "Singles Match",
+        match: "Jack Stryker def. Lil Pep",
+      },
+    ],
+    segments: [
+      {
+        title: "French Invasion Earn Their Shot",
+        text: "After defeating The Grays in the #1 contenders match, French Invasion secured redemption in the form of a future BPW Tag Team Championship opportunity against the champions they couldn't defeat at Ground Zero: The Northern Mafia.",
+      },
+      {
+        title: "Jepson Wants The Gold",
+        text: "Following Beast King's successful Intercontinental Championship defense, Karl Jepson confronted the champion and made it clear that he had not forgotten losing the title at Ground Zero and that he would be back after taking the World Championship off of Shawn Dessler at Fracture.",
+      },
+      {
+        title: "Stryker Stakes His Claim",
+        text: "In a twist no one saw coming, Jack Stryker comes out and tells Karl Jepson that he is next in line against Beast King for his intercontinental championship. He then attacked Jepson and the three men had to be pulled away from eachother by security!",
+      },
+      {
+        title: "Dessler Smells Blood",
+        text: "During the chaos, the World Champion came out to penalty kick Jepson, sending a clear message that he is the man to beat and that his challenger should concentrate on him instead of his petty conflict.",
+      },
+    ],
+  },
+
+  "ground-zero": {
+    eyebrow: "Past Event",
+    title: "Breakpoint: Ground Zero",
+    meta: "July 20th, 2026 • Drummondville, QC",
+
+    results: [
+      {
+        type: "BPW World Championship",
+        match: "Shawn Dessler (C) def. KC Austin",
+      },
+      {
+        type: "BPW Intercontinental Championship",
+        match: "Beast King FTM def. Karl Jepson (C)",
+      },
+      {
+        type: "BPW Tag Team Championship",
+        match: "The Northern Mafia (C) def. The French Invasion",
+      },
+      {
+        type: "Singles Match",
+        match: "Grixix def. Lil Pep",
+      },
+    ],
+
+    segments: [
+      {
+        title: "The Beast Claims Gold",
+        text: "Beast King FTM defeated Karl Jepson to capture the BPW Intercontinental Championship, ending Jepson's reign and beginning a new era of brutality in the division.",
+      },
+      {
+        title: "French Invasion Refuse To Stay Down",
+        text: "Despite falling short against The Northern Mafia, French Invasion refused to accept the loss quietly and promised they would fight their way back to another championship opportunity.",
+      },
+      {
+        title: "Shawn Dessler stomps out yet another challenger",
+        text: "After a low blow at a critical point of the match, Shawn Dessler took advantage of the opportunity to use his dreaded 'Lights Out' penalty kick to seal another win and defend his World Championship.",
+      },
+    ],
+  },
+};
+/* Past Event Results Modal */
+
+const resultsModal = document.querySelector("#results-modal");
+const resultsButtons = document.querySelectorAll(".results-button");
+
+const resultsModalClose = document.querySelector(".results-modal__close");
+const resultsModalBackdrop = document.querySelector(".results-modal__backdrop");
+
+const resultsModalEyebrow = document.querySelector("#results-modal-eyebrow");
+const resultsModalTitle = document.querySelector("#results-modal-title");
+const resultsModalMeta = document.querySelector("#results-modal-meta");
+const resultsModalResults = document.querySelector("#results-modal-results");
+const resultsModalSegments = document.querySelector("#results-modal-segments");
+
+if (
+  resultsModal &&
+  resultsButtons.length > 0 &&
+  resultsModalClose &&
+  resultsModalBackdrop &&
+  resultsModalEyebrow &&
+  resultsModalTitle &&
+  resultsModalMeta &&
+  resultsModalResults &&
+  resultsModalSegments
+) {
+  resultsButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const eventId = button.dataset.event;
+      const eventData = pastEvents[eventId];
+
+      if (!eventData) {
+        return;
+      }
+
+      /* Event information */
+      resultsModalEyebrow.textContent = eventData.eyebrow;
+      resultsModalTitle.textContent = eventData.title;
+      resultsModalMeta.textContent = eventData.meta;
+
+      /* Match results */
+      resultsModalResults.innerHTML = "";
+
+      eventData.results.forEach((result) => {
+        resultsModalResults.innerHTML += `
+          <div class="result-item">
+            <p class="result-item__type">${result.type}</p>
+            <p class="result-item__match">${result.match}</p>
+          </div>
+        `;
+      });
+
+      /* Event segments */
+      resultsModalSegments.innerHTML = "";
+
+      if (eventData.segments && eventData.segments.length > 0) {
+        eventData.segments.forEach((segment) => {
+          resultsModalSegments.innerHTML += `
+            <div class="result-segment">
+              <p class="result-segment__label">Event Segment</p>
+              <h3 class="result-segment__title">${segment.title}</h3>
+              <p class="result-segment__text">${segment.text}</p>
+            </div>
+          `;
+        });
+      }
+
+      /* Open modal */
+      resultsModal.classList.add("results-modal--open");
+      resultsModal.setAttribute("aria-hidden", "false");
+    });
+  });
+
+  function closeResultsModal() {
+    resultsModal.classList.remove("results-modal--open");
+    resultsModal.setAttribute("aria-hidden", "true");
+  }
+
+  resultsModalClose.addEventListener("click", closeResultsModal);
+
+  resultsModalBackdrop.addEventListener("click", closeResultsModal);
+
+  document.addEventListener("keydown", (event) => {
+    if (
+      event.key === "Escape" &&
+      resultsModal.classList.contains("results-modal--open")
+    ) {
+      closeResultsModal();
+    }
+  });
+}

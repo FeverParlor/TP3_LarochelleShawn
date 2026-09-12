@@ -70,7 +70,6 @@
               />
             </div>
 
-            <!-- Event information -->
             <div class="featured-event__content col-span-12 lg:col-span-7">
               <p class="featured-event__eyebrow">Next Event</p>
 
@@ -134,7 +133,176 @@
         </div>
       </section>
 
-      <!--Modal-->
+      <!-- UPCOMING EVENTS -->
+      <section class="events-list events-list--upcoming">
+        <div class="events-list__inner">
+          <div class="events-list__header">
+            <p class="events-list__eyebrow">What's Next</p>
+            <h2 class="events-list__title">Upcoming Events</h2>
+
+            <p class="events-list__text">
+              The next stops on the Breakpoint Pro Wrestling calendar.
+            </p>
+          </div>
+
+          <div class="events-list__grid grid grid-cols-12 gap-6">
+            <article class="event-preview col-span-12 md:col-span-6">
+              <div class="event-preview__accent" aria-hidden="true"></div>
+
+              <p class="event-preview__status">Upcoming</p>
+
+              <h3 class="event-preview__name">
+                <span>Breakpoint:</span>
+                Aftershock
+              </h3>
+
+              <p class="event-preview__meta">
+                November 9th, 2026
+                <span>•</span>
+                Sherbrooke, QC
+              </p>
+
+              <p class="event-preview__description">
+                BPW returns to Sherbrooke as the fallout from Fracture begins to
+                reshape the championship picture.
+              </p>
+            </article>
+
+            <article class="event-preview col-span-12 md:col-span-6">
+              <div class="event-preview__accent" aria-hidden="true"></div>
+
+              <p class="event-preview__status">Upcoming</p>
+
+              <h3 class="event-preview__name">
+                <span>Breakpoint:</span>
+                Final Hour
+              </h3>
+
+              <p class="event-preview__meta">
+                December 14th, 2026
+                <span>•</span>
+                Montreal, QC
+              </p>
+
+              <p class="event-preview__description">
+                BPW closes the year with one final night where every rivalry has
+                one last chance to explode.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAST EVENTS -->
+      <section class="events-list events-list--past">
+        <div class="events-list__inner">
+          <div class="events-list__header">
+            <p class="events-list__eyebrow">From The Archives</p>
+            <h2 class="events-list__title">Past Events</h2>
+
+            <p class="events-list__text">
+              Revisit the nights that shaped Breakpoint Pro Wrestling.
+            </p>
+          </div>
+
+          <div class="events-list__grid grid grid-cols-12 gap-6">
+            <!-- Brutality -->
+            <article
+              class="event-preview event-preview--past col-span-12 md:col-span-4"
+            >
+              <p class="event-preview__status">Previous Event</p>
+
+              <h3 class="event-preview__name">
+                <span>Breakpoint:</span>
+                Brutality
+              </h3>
+
+              <p class="event-preview__meta">
+                September 14th, 2026
+                <span>•</span>
+                Sherbrooke, QC
+              </p>
+
+              <p class="event-preview__description">
+                A violent night whose consequences continued long after the
+                final bell.
+              </p>
+
+              <button
+                class="event-preview__button event-preview__button--ghost results-button"
+                type="button"
+                data-event="brutality"
+              >
+                View Results
+              </button>
+            </article>
+
+            <!-- Collision -->
+            <article
+              class="event-preview event-preview--past col-span-12 md:col-span-4"
+            >
+              <p class="event-preview__status">Past Event</p>
+
+              <h3 class="event-preview__name">
+                <span>Breakpoint:</span>
+                Collision
+              </h3>
+
+              <p class="event-preview__meta">
+                August 17th, 2026
+                <span>•</span>
+                Montreal, QC
+              </p>
+
+              <p class="event-preview__description">
+                Rivalries collided and new contenders emerged from a chaotic
+                night in Montreal.
+              </p>
+
+              <button
+                class="event-preview__button event-preview__button--ghost results-button"
+                type="button"
+                data-event="collision"
+              >
+                View Results
+              </button>
+            </article>
+
+            <!-- Ground Zero -->
+            <article
+              class="event-preview event-preview--past col-span-12 md:col-span-4"
+            >
+              <p class="event-preview__status">Past Event</p>
+
+              <h3 class="event-preview__name">
+                <span>Breakpoint:</span>
+                Ground Zero
+              </h3>
+
+              <p class="event-preview__meta">
+                July 20th, 2026
+                <span>•</span>
+                Drummondville, QC
+              </p>
+
+              <p class="event-preview__description">
+                The summer began with a statement as BPW reset the board at
+                Ground Zero.
+              </p>
+
+              <button
+                class="event-preview__button event-preview__button--ghost results-button"
+                type="button"
+                data-event="ground-zero"
+              >
+                View Results
+              </button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!--Featured Event Modal-->
       <div class="event-modal" id="event-modal" aria-hidden="true">
         <div class="event-modal__backdrop"></div>
 
@@ -226,11 +394,11 @@
 
                   <div class="event-match__wrestler">
                     <img
-                      src="assets/images/wrestlers/Lil_Pep-Matchup.png"
+                      src="assets/images/wrestlers/Grixix-Matchup.png"
                       alt="Lil Pep"
                     />
 
-                    <h3>Lil Pep</h3>
+                    <h3>Grixix</h3>
                   </div>
                 </div>
               </article>
@@ -354,6 +522,46 @@
               </article>
             </div>
           </div>
+        </div>
+      </div>
+
+      <!-- PAST EVENT RESULTS MODAL -->
+      <div class="results-modal" id="results-modal" aria-hidden="true">
+        <div class="results-modal__backdrop"></div>
+
+        <div
+          class="results-modal__dialog"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="results-modal-title"
+        >
+          <button
+            class="results-modal__close"
+            type="button"
+            aria-label="Close event results"
+          >
+            ×
+          </button>
+
+          <div class="results-modal__header">
+            <p class="results-modal__eyebrow" id="results-modal-eyebrow">
+              Past Event
+            </p>
+
+            <h2 class="results-modal__title" id="results-modal-title">
+              Breakpoint: Brutality
+            </h2>
+
+            <p class="results-modal__meta" id="results-modal-meta">
+              September 14th, 2026 • Sherbrooke, QC
+            </p>
+          </div>
+
+          <div class="results-modal__results" id="results-modal-results"></div>
+          <div
+            class="results-modal__segments"
+            id="results-modal-segments"
+          ></div>
         </div>
       </div>
     </main>

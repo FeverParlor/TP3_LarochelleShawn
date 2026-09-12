@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Academy | Breakpoint Pro Wrestling</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a
+          class="site-header__logo"
+          href="P1-index.html"
+          aria-label="Breakpoint Pro Wrestling home"
+        >
+          BPW
+        </a>
+
+        <nav class="site-nav" aria-label="Main navigation">
+          <ul class="site-nav__list">
+            <li>
+              <a class="site-nav__link" href="P2-roster.html"> Roster </a>
+            </li>
+
+            <li>
+              <a class="site-nav__link" href="P3-events.html"> Events </a>
+            </li>
+
+            <li>
+              <a class="site-nav__link" href="P4-championship.html">
+                Championships
+              </a>
+            </li>
+
+            <li>
+              <a class="site-nav__link" href="P5-academy.html"> Academy </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- ACADEMY HERO -->
+      <section class="academy-hero">
+        <div class="academy-hero__overlay" aria-hidden="true"></div>
+
+        <div class="academy-hero__inner">
+          <p class="academy-hero__eyebrow">Breakpoint Pro Wrestling</p>
+
+          <h1 class="academy-hero__title">BPW Academy</h1>
+
+          <p class="academy-hero__subtitle">
+            Learn the craft. Find your identity. Earn your place.
+          </p>
+        </div>
+      </section>
+
+      <!-- SECTION 1 - TRAINING -->
+      <section class="academy-training">
+        <div class="academy-training__inner">
+          <div class="academy-section-header">
+            <p class="academy-section-header__eyebrow">Build Your Foundation</p>
+
+            <h2 class="academy-section-header__title">Train Like a Wrestler</h2>
+
+            <p class="academy-section-header__text">
+              BPW Academy develops aspiring professional wrestlers from their
+              first bump to their first match, with training focused on the
+              skills needed to perform safely, confidently and effectively.
+            </p>
+          </div>
+
+          <div class="academy-training__grid grid grid-cols-12 gap-6">
+            <article class="training-card col-span-12 md:col-span-4">
+              <p class="training-card__number">01</p>
+
+              <h3 class="training-card__title">Fundamentals</h3>
+
+              <p class="training-card__text">
+                Learn movement, bumping, footwork, ring awareness and the core
+                techniques every professional wrestler needs.
+              </p>
+            </article>
+
+            <article class="training-card col-span-12 md:col-span-4">
+              <p class="training-card__number">02</p>
+
+              <h3 class="training-card__title">In-Ring Development</h3>
+
+              <p class="training-card__text">
+                Develop your offense, defense, match structure and ability to
+                adapt to different opponents and situations.
+              </p>
+            </article>
+
+            <article class="training-card col-span-12 md:col-span-4">
+              <p class="training-card__number">03</p>
+
+              <h3 class="training-card__title">Character & Promo</h3>
+
+              <p class="training-card__text">
+                Find your voice, build a believable identity and learn how to
+                connect with an audience beyond the moves themselves.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!--- COACHING & FACILITIES --->
+      <section class="academy-development">
+        <div
+          class="academy-development__inner grid grid-cols-12 gap-8 items-center"
+        >
+          <div class="academy-development__content col-span-12 lg:col-span-6">
+            <p class="academy-development__eyebrow">More Than Repetition</p>
+
+            <h2 class="academy-development__title">Built for Development</h2>
+
+            <p class="academy-development__text">
+              Training at BPW Academy combines hands-on coaching with a
+              dedicated environment built for professional wrestling. Students
+              learn through practice, feedback and experience rather than simply
+              memorizing sequences.
+            </p>
+
+            <div class="academy-development__features">
+              <div class="academy-feature">
+                <span class="academy-feature__mark">+</span>
+                <p>Professional wrestling ring and training space</p>
+              </div>
+
+              <div class="academy-feature">
+                <span class="academy-feature__mark">+</span>
+                <p>Small-group coaching and direct feedback</p>
+              </div>
+
+              <div class="academy-feature">
+                <span class="academy-feature__mark">+</span>
+                <p>Match preparation and live-performance experience</p>
+              </div>
+
+              <div class="academy-feature">
+                <span class="academy-feature__mark">+</span>
+                <p>Conditioning focused on the demands of the ring</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="academy-development__visual col-span-12 lg:col-span-6">
+            <img
+              src="assets/images/Dojo/Academy.jpg"
+              alt="Professional wrestler performing in a wrestling ring in front of a live crowd"
+              class="academy-development__image"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!--- JOIN CTA--->
+      <section class="academy-join">
+        <div class="academy-join__inner">
+          <div class="academy-join__header">
+            <p class="academy-join__eyebrow">Your First Bell</p>
+
+            <h2 class="academy-join__title">Apply to BPW Academy</h2>
+
+            <p class="academy-join__text">
+              Tell us a little about yourself and what you want to accomplish in
+              professional wrestling.
+            </p>
+          </div>
+
+          <form class="academy-form" id="academy-form" novalidate>
+            <div class="academy-form__grid">
+              <div class="academy-form__field">
+                <label for="first-name">First Name</label>
+                <input
+                  type="text"
+                  id="first-name"
+                  name="firstName"
+                  placeholder="Shawn"
+                />
+                <small class="academy-form__error"></small>
+              </div>
+
+              <div class="academy-form__field">
+                <label for="last-name">Last Name</label>
+                <input
+                  type="text"
+                  id="last-name"
+                  name="lastName"
+                  placeholder="Dessler"
+                />
+                <small class="academy-form__error"></small>
+              </div>
+
+              <div class="academy-form__field">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="name@email.com"
+                />
+                <small class="academy-form__error"></small>
+              </div>
+
+              <div class="academy-form__field">
+                <label for="phone">Phone</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="819-555-1234"
+                />
+                <small class="academy-form__error"></small>
+              </div>
+
+              <div class="academy-form__field">
+                <label for="age">Age</label>
+                <input
+                  type="number"
+                  id="age"
+                  name="age"
+                  min="18"
+                  placeholder="18"
+                />
+                <small class="academy-form__error"></small>
+              </div>
+
+              <div class="academy-form__field">
+                <label for="city">City</label>
+                <input
+                  type="text"
+                  id="city"
+                  name="city"
+                  placeholder="Sherbrooke"
+                />
+                <small class="academy-form__error"></small>
+              </div>
+
+              <div class="academy-form__field academy-form__field--full">
+                <label for="experience">Experience Level</label>
+
+                <select id="experience" name="experience">
+                  <option value="">Choose an option</option>
+                  <option value="none">No wrestling experience</option>
+                  <option value="beginner">Beginner</option>
+                  <option value="trained">Previously trained</option>
+                  <option value="active">Active wrestler</option>
+                </select>
+
+                <small class="academy-form__error"></small>
+              </div>
+
+              <div class="academy-form__field academy-form__field--full">
+                <label for="fitness">Current Fitness Level</label>
+
+                <select id="fitness" name="fitness">
+                  <option value="">Choose an option</option>
+                  <option value="beginner">Mostly inactive</option>
+                  <option value="light">
+                    Lightly active - 1 to 2 workouts per week
+                  </option>
+                  <option value="moderate">
+                    Active - 3 to 4 workouts per week
+                  </option>
+                  <option value="high">
+                    Very active - 5+ workouts per week
+                  </option>
+                  <option value="athlete">
+                    Competitive athlete / intensive training
+                  </option>
+                </select>
+
+                <small class="academy-form__error"></small>
+              </div>
+
+              <div class="academy-form__field academy-form__field--full">
+                <label for="goal">What do you want to learn?</label>
+
+                <textarea
+                  id="goal"
+                  name="goal"
+                  rows="5"
+                  placeholder="Tell us about your goals..."
+                ></textarea>
+
+                <small class="academy-form__error"></small>
+              </div>
+
+              <div class="academy-form__field academy-form__field--full">
+                <label class="academy-form__checkbox">
+                  <input
+                    type="checkbox"
+                    id="information-agreement"
+                    name="informationAgreement"
+                  />
+
+                  <span>
+                    I understand and read all the information provided on this
+                    page.
+                  </span>
+                </label>
+
+                <label class="academy-form__checkbox">
+                  <input
+                    type="checkbox"
+                    id="physical-agreement"
+                    name="physicalAgreement"
+                  />
+
+                  <span>
+                    I understand that professional wrestling training is
+                    extremely demanding physically.
+                  </span>
+                </label>
+
+                <small class="academy-form__error"></small>
+              </div>
+            </div>
+
+            <button class="academy-form__submit" type="submit">
+              Submit Application
+            </button>
+
+            <p
+              class="academy-form__success"
+              id="academy-form-success"
+              aria-live="polite"
+            ></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="site-footer__brand">
+          <a
+            class="site-footer__logo"
+            href="P1-index.html"
+            aria-label="Breakpoint Pro Wrestling home"
+          >
+            BPW
+          </a>
+
+          <p class="site-footer__tagline">No Limit. Make or Break.</p>
+        </div>
+
+        <nav class="site-footer__nav" aria-label="Footer navigation">
+          <a href="P2-roster.html">Roster</a>
+          <a href="P3-events.html">Events</a>
+          <a href="P4-championship.html">Championships</a>
+          <a href="P5-academy.html">Academy</a>
+        </nav>
+
+        <div class="site-footer__meta">
+          <p>© 2026 Breakpoint Pro Wrestling</p>
+          <p>All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/academy-validation.js"></script>
+  </body>
+</html>
