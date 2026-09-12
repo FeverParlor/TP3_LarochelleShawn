@@ -1,4 +1,4 @@
-const CACHE_NAME = "bpw-cache-v2";
+const CACHE_NAME = "bpw-cache-v3";
 
 const APP_SHELL = [
   "./",
