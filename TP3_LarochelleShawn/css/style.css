@@ -3240,6 +3240,122 @@ select {
     grid-template-columns: 1fr;
   }
 
+  /* Mobile wrestler modal */
+  .wrestler-modal {
+    padding: 14px;
+  }
+
+  .wrestler-modal__dialog {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 92vh;
+    overflow-y: auto;
+  }
+
+  .wrestler-modal__image {
+    height: 260px;
+    min-height: 260px;
+  }
+
+  .wrestler-modal__image img {
+    width: 85%;
+    height: 95%;
+    object-fit: contain;
+    object-position: center bottom;
+  }
+
+  .wrestler-modal__content {
+    padding: 28px 22px 30px;
+  }
+
+  .wrestler-modal__name {
+    font-size: 2.4rem;
+  }
+
+  .wrestler-modal__nickname {
+    margin-bottom: 20px;
+  }
+
+  .wrestler-modal__stats {
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .wrestler-modal__close {
+    top: 12px;
+    right: 12px;
+  }
+
+  /* Mobile main event proportions */
+  .event-match--main .event-match__content {
+    min-height: 230px;
+    padding-top: 6px;
+  }
+
+  .event-match--main .event-match__wrestler img {
+    height: 210px;
+  }
+
+  .event-match--main .event-match__vs {
+    font-size: 2.8rem;
+  }
+
+  /* Mobile Tag Team PNGs modifications */
+
+  .event-match__team-images {
+    height: 135px;
+  }
+
+  .event-match__team-images img {
+    width: 62%;
+    height: 135px;
+  }
+
+  .event-match__team-images img:first-child {
+    margin-right: -24px;
+  }
+
+  .event-match__team-images img:last-child {
+    margin-left: -24px;
+  }
+
+  .event-match__team-members {
+    font-size: 0.58rem;
+  }
+
+  /* Mobile wrestler size corrections */
+
+  .event-match__image--dessler {
+    transform: scale(1);
+    transform-origin: center bottom;
+  }
+
+  .event-match__image--axel {
+    transform: scale(0.92);
+    transform-origin: center bottom;
+  }
+
+  .event-match__image--karl {
+    transform: translateY(-10px) scale(0.99);
+    transform-origin: center bottom;
+  }
+
+  .event-match__image--jack {
+    transform: translateY(-10px) scale(1.1);
+    transform-origin: center bottom;
+  }
+
+  .event-match__image--grixix {
+    transform: translateY(-8px) scale(1.02);
+    transform-origin: center bottom;
+  }
+
+  .event-match__image--rayen {
+    transform: translateY(-8px) scale(1.02);
+    transform-origin: center bottom;
+  }
+
   /* P4: Sections order corrections */
 
   .championship--world .championship__inner,
@@ -3291,60 +3407,5 @@ select {
 
   .championship--tag .championship__stat--members {
     grid-column: auto;
-  }
-
-  /* Mobile Tag Team PNGs modifications */
-
-  .event-match__team-images {
-    height: 135px;
-  }
-
-  .event-match__team-images img {
-    width: 62%;
-    height: 135px;
-  }
-
-  .event-match__team-images img:first-child {
-    margin-right: -24px;
-  }
-
-  .event-match__team-images img:last-child {
-    margin-left: -24px;
-  }
-
-  .event-match__team-members {
-    font-size: 0.58rem;
-  }
-
-  /* Mobile wrestler size corrections */
-
-  .event-match__image--dessler {
-    transform: translateY(-10px) scale(1.22);
-    transform-origin: center bottom;
-  }
-
-  .event-match__image--axel {
-    transform: translateY(-10px) scale(0.92);
-    transform-origin: center bottom;
-  }
-
-  .event-match__image--karl {
-    transform: translateY(-10px) scale(0.99);
-    transform-origin: center bottom;
-  }
-
-  .event-match__image--jack {
-    transform: translateY(-10px) scale(1.1);
-    transform-origin: center bottom;
-  }
-
-  .event-match__image--grixix {
-    transform: translateY(-8px) scale(1.02);
-    transform-origin: center bottom;
-  }
-
-  .event-match__image--rayen {
-    transform: translateY(-8px) scale(1.02);
-    transform-origin: center bottom;
   }
 }
