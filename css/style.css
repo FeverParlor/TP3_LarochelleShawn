@@ -1056,6 +1056,15 @@ select {
   filter: brightness(1.08) contrast(1.06);
 }
 
+.roster-card:hover .roster-card__image--rayen {
+  transform: translateX(22px) rotate(2deg) scale(1.22);
+}
+
+.roster-card__image--rayen {
+  transform: scale(1.18);
+  transform-origin: center bottom;
+}
+
 .roster-card__content {
   display: flex;
   flex-direction: column;
@@ -1896,27 +1905,39 @@ select {
   margin-top: 2px;
 }
 
-/* Individual Match */
+/* Base match card */
+
 .event-match {
   position: relative;
   overflow: hidden;
-  min-height: 250px;
+  min-height: 0;
   background:
     radial-gradient(circle at center, rgba(181, 20, 35, 0.2), transparent 58%),
     #151515;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-bottom: 3px solid var(--color-crimson);
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
-/* Main Event */
+.event-match:hover {
+  border-color: rgba(181, 20, 35, 0.4);
+  box-shadow:
+    inset 0 0 30px rgba(181, 20, 35, 0.05),
+    0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Main event */
+
 .event-match--main {
-  min-height: 350px;
   background:
     radial-gradient(circle at center, rgba(181, 20, 35, 0.3), transparent 55%),
     #151515;
 }
 
-/* Match Type / Championship */
+/* Match label */
+
 .event-match__label {
   position: relative;
   z-index: 3;
@@ -1933,66 +1954,84 @@ select {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* Wrestler Layout */
+/* Wrestler layout */
+
 .event-match__content {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   align-items: end;
-  min-height: 300px;
-  padding: 14px 20px 0;
+  min-height: 270px;
+  padding: 16px 20px 0;
 }
 
-/* Smaller Undercard Matches */
 .event-match__content--small {
-  min-height: 220px;
+  min-height: 210px;
   padding: 12px 12px 0;
 }
 
-/* Wrestler */
 .event-match__wrestler {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: center;
   min-width: 0;
   text-align: center;
 }
 
+/* Wrestler images */
+
 .event-match__wrestler img {
-  width: 100%;
-  height: 190px;
-  margin: 0 auto 10px;
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: 150px;
+  margin: 0 auto 8px;
   object-fit: contain;
   object-position: center bottom;
+  transform-origin: center bottom;
 }
 
-/* Individual PNG size corrections */
+/* Main event images */
+
+.event-match--main .event-match__wrestler img {
+  height: 220px;
+  margin-bottom: 10px;
+}
+
+/* Small individual PNG corrections */
+
+.event-match__image--dessler {
+  transform: scale(1.05);
+}
+
+.event-match__image--axel {
+  transform: scale(1.02);
+}
 
 .event-match__image--beast {
-  transform: scale(1.22);
-  transform-origin: center bottom;
+  transform: scale(1.15);
+}
+
+.event-match__image--karl {
+  transform: scale(1);
+}
+
+.event-match__image--jack {
+  transform: scale(1.04);
+}
+
+.event-match__image--grixix {
+  transform: scale(1.02);
 }
 
 .event-match__image--rayen {
-  transform: scale(1.18);
-  transform-origin: center bottom;
+  transform: scale(1.08);
 }
 
-/* Main Event Wrestlers */
-.event-match--main .event-match__wrestler img {
-  height: 260px;
-  margin-bottom: 12px;
-}
+/* Wrestler names */
 
-/* Smaller Match Wrestlers */
-.event-match__content--small .event-match__wrestler img {
-  height: 155px;
-  margin-bottom: 8px;
-}
-
-/* Wrestler Names */
-.event-match__wrestler h3,
-.event-match__teams h3 {
+.event-match__wrestler h3 {
   position: relative;
   z-index: 2;
   margin: 0 0 14px;
@@ -2005,18 +2044,16 @@ select {
   text-transform: uppercase;
 }
 
-/* Main Event Names */
 .event-match--main .event-match__wrestler h3 {
   font-size: 1.4rem;
 }
 
-/* Champion Marker */
-.event-match__wrestler h3 span,
-.event-match__teams h3 span {
+.event-match__wrestler h3 span {
   color: var(--color-grey);
 }
 
 /* VS */
+
 .event-match__vs {
   position: relative;
   z-index: 2;
@@ -2030,76 +2067,52 @@ select {
   text-transform: uppercase;
 }
 
-/* Larger Main Event VS */
 .event-match--main .event-match__vs {
   color: var(--color-crimson-light);
-
-  font-size: 3.5rem;
+  font-size: 3rem;
 }
 
-/* TAG TEAM MATCH */
+/* Tag teams */
 
 .event-match__wrestler--team {
   min-width: 0;
 }
 
 .event-match__team-images {
+  width: 100%;
+  height: 150px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  height: 165px;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .event-match__team-images img {
   display: block;
   width: 54%;
-  height: 165px;
+  height: 150px;
   object-fit: contain;
   object-position: center bottom;
-  transform: translateY(10px) scale(0.92);
+  transform: scale(1.22);
   transform-origin: center bottom;
 }
 
 .event-match__wrestler--grays .event-match__team-images img {
-  transform: translateY(2px) scale(0.8);
+  transform: scale(1.16);
 }
 
 .event-match__team-images img:first-child {
-  margin-right: -26px;
+  margin-right: -8px;
 }
 
 .event-match__team-images img:last-child {
-  margin-left: -26px;
+  margin-left: -8px;
 }
 
 .event-match__wrestler--team h3 {
   margin-top: 0;
-}
-
-.event-match__team-members {
-  margin: -6px 0 12px;
-  color: var(--color-grey);
-  font-size: 0.68rem;
-  line-height: 1.3;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-/* MATCH CARD HOVER */
-
-.event-match {
-  transition:
-    border-color 0.25s ease,
-    box-shadow 0.25s ease;
-}
-
-.event-match:hover {
-  border-color: rgba(181, 20, 35, 0.4);
-  box-shadow:
-    inset 0 0 30px rgba(181, 20, 35, 0.05),
-    0 8px 25px rgba(0, 0, 0, 0.25);
+  white-space: nowrap;
+  font-size: clamp(0.72rem, 1.4vw, 1rem);
 }
 
 /* P3 - UPCOMING / PAST EVENTS */
@@ -3127,6 +3140,30 @@ select {
   }
 }
 
+@media (min-width: 1024px) {
+  .academy-development__visual {
+    height: 100%;
+  }
+
+  .academy-development__image {
+    height: 100%;
+    min-height: 100%;
+  }
+
+  .championship__stats {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
+  }
+
+  .championship__stat {
+    height: 100%;
+  }
+
+  .championship__stat:last-child {
+    grid-column: auto;
+  }
+}
+
 @media (max-width: 1023px) {
   .academy-development__visual {
     min-height: 320px;
@@ -3140,22 +3177,55 @@ select {
     min-height: 0;
     object-fit: cover;
   }
+
+  .championship__stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .championship__stat:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .championship__stats--tag {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .championship__stats--tag .championship__stat--members {
+    grid-column: 1 / -1;
+  }
+
+  .match-card__matchup {
+    height: 220px;
+  }
+
+  .match-card__wrestler > img {
+    width: auto;
+    height: 150px;
+    max-width: 90%;
+    max-height: 150px;
+    object-fit: contain;
+  }
+
+  .match-card__team {
+    height: 150px;
+  }
+
+  .match-card__team img {
+    width: auto;
+    height: 140px;
+    max-width: 60%;
+    object-fit: contain;
+  }
 }
 
-.championship__stats {
-  grid-template-columns: repeat(2, 1fr);
-}
+@media (min-width: 769px) and (max-width: 1023px) {
+  .event-match__team-images img {
+    transform: scale(1.08);
+  }
 
-.championship__stat:last-child {
-  grid-column: 1 / -1;
-}
-
-.championship__stats--tag {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.championship__stats--tag .championship__stat--members {
-  grid-column: 1 / -1;
+  .event-match__wrestler--grays .event-match__team-images img {
+    transform: scale(1.03);
+  }
 }
 
 @media (max-width: 768px) {
@@ -3309,73 +3379,119 @@ select {
     right: 12px;
   }
 
-  /* Mobile main event proportions */
-  .event-match--main .event-match__content {
-    min-height: 230px;
-    padding-top: 6px;
-  }
-
-  .event-match--main .event-match__wrestler img {
-    height: 210px;
-  }
-
-  .event-match--main .event-match__vs {
-    font-size: 2.8rem;
-  }
-
-  /* Mobile Tag Team PNGs modifications */
+  /* Mobile tag teams */
 
   .event-match__team-images {
-    height: 135px;
+    height: 140px;
+    margin-bottom: 6px;
   }
 
   .event-match__team-images img {
-    width: 62%;
-    height: 135px;
+    width: 52%;
+    height: 140px;
+    transform: scale(1.05);
+  }
+
+  .event-match__wrestler--grays .event-match__team-images img {
+    transform: scale(0.98);
   }
 
   .event-match__team-images img:first-child {
-    margin-right: -24px;
+    margin-right: -8px;
   }
 
   .event-match__team-images img:last-child {
-    margin-left: -24px;
+    margin-left: -8px;
   }
 
-  .event-match__team-members {
-    font-size: 0.58rem;
+  .match-card__wrestler > img {
+    height: 135px;
+    max-height: 135px;
   }
 
-  /* Mobile wrestler size corrections */
+  .match-card__team {
+    height: 135px;
+  }
+
+  .match-card__team img {
+    height: 125px;
+  }
+
+  .match-card__wrestler strong {
+    white-space: nowrap;
+    font-size: clamp(0.65rem, 3vw, 1rem);
+    padding: 4px 6px;
+    line-height: 1.1;
+  }
+
+  /* P3 mobile match cards */
+
+  .event-match__content {
+    min-height: 205px;
+    padding: 10px 8px 0;
+  }
+
+  .event-match__content--small {
+    min-height: 175px;
+    padding: 8px 6px 0;
+  }
+
+  .event-match__wrestler img {
+    height: 125px;
+    margin-bottom: 6px;
+  }
+
+  .event-match--main .event-match__content {
+    min-height: 225px;
+  }
+
+  .event-match--main .event-match__wrestler img {
+    height: 165px;
+  }
+
+  .event-match__vs {
+    padding: 0 4px;
+    font-size: 1.8rem;
+  }
+
+  .event-match--main .event-match__vs {
+    font-size: 2.5rem;
+  }
+
+  .event-match__wrestler h3 {
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+  }
+
+  .event-match--main .event-match__wrestler h3 {
+    font-size: 1rem;
+  }
+
+  .event-match__team-images {
+    height: 125px;
+    margin-bottom: 6px;
+  }
+
+  .event-match__team-images img {
+    width: 65%;
+    height: 110px;
+    transform: scale(1.18);
+  }
+
+  .event-match__wrestler--grays .event-match__team-images img {
+    transform: scale(1.12);
+  }
+
+  .event-match__wrestler--team h3 {
+    font-size: 0.82rem;
+  }
 
   .event-match__image--dessler {
-    transform: scale(1);
-    transform-origin: center bottom;
+    transform: scale(1.1);
   }
 
-  .event-match__image--axel {
-    transform: scale(0.92);
-    transform-origin: center bottom;
-  }
-
-  .event-match__image--karl {
-    transform: translateY(-10px) scale(0.99);
-    transform-origin: center bottom;
-  }
-
-  .event-match__image--jack {
-    transform: translateY(-10px) scale(1.1);
-    transform-origin: center bottom;
-  }
-
-  .event-match__image--grixix {
-    transform: translateY(-8px) scale(1.02);
-    transform-origin: center bottom;
-  }
-
-  .event-match__image--rayen {
-    transform: translateY(-8px) scale(1.02);
-    transform-origin: center bottom;
+  .event-match__image--beast {
+    transform: scale(1.15);
   }
 
   /* P4: Sections order corrections */

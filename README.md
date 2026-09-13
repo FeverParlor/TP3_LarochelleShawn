@@ -16,7 +16,7 @@ The visual identity is inspired by my passion for professional wrestling and spo
 
 The website is responsive and uses a 12-column Tailwind CSS grid system to adapt its content to different screen sizes.
 
-Do note that every wrestler figuring in this website has accepted and provided the pictures seen depicting them.
+All wrestlers featured on this website gave permission for the use of the photographs depicting them.
 
 ---
 
@@ -84,7 +84,7 @@ The website contains multiple custom CSS animations.
 
 ### 1. `ticker-scroll`
 
-Used for the BPW live ticker. The animation continuously moves information across the screen to reproduce the appearance of a television sports/news ticker. The coding came from multiple source research adapted to the needs of the website
+Used for the BPW live ticker. The animation continuously moves information across the screen to reproduce the appearance of a television sports/news ticker. The ticker animation was developed for the BPW project using CSS animation techniques documented by MDN and adapted to create a continuous sports-broadcast ticker.
 
 ### 2. `ember-float`
 
@@ -92,7 +92,7 @@ Used for decorative ember particles. Elements move vertically to create subtle a
 
 ### 3. `ember-float-high`
 
-The second part of the ember animation. A variation of the initial animation with a different movement range. It creates additional visual variation and prevents the particle effect from appearing uniform.
+The second part of the ember animation. A variation of the ember particle animation using a larger movement range. It creates additional visual variation and prevents the particle effect from appearing uniform.
 
 The animations were created specifically for the BPW project using CSS `@keyframes`.
 
@@ -144,7 +144,7 @@ Accessibility considerations include:
 - Alternative text for meaningful images
 - Labels associated with form controls
 - ARIA attributes where appropriate
-- Keyboard-accessible interactive elements
+- Keyboard-focusable interactive elements
 - Responsive layouts
 - Appropriate heading structure
 
@@ -158,13 +158,13 @@ Generative AI tools were used during development as an assistance and debugging 
 
 AI assistance was used for tasks including:
 
-- Personnal organizer (Agenda, task prioritizer, deadlines)
-- Debugging complex HTML, CSS and JavaScript by the end of conception
-- Explaining validation errors when needed
+- Personal organization, task prioritization and deadline planning
+- Debugging HTML, CSS and JavaScript during final development
+- Explaining validation errors
 - Improving accessibility and semantic HTML
 - Troubleshooting the PWA and Service Worker
-- Second opinion on responsive behaviors
-- Assisting with code visual organization
+- Reviewing responsive behavior
+- Assisting with code organization
 
 The project's visual direction, structure, content, implementation decisions and final integration were developed and reviewed by me as part of the project.
 
@@ -180,7 +180,7 @@ https://github.com/FeverParlor/TP3_LarochelleShawn
 
 GitHub Pages:
 
-[ADD GITHUB PAGES URL HERE]
+https://feverparlor.github.io/TP3_LarochelleShawn/
 
 ---
 
